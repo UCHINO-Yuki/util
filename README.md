@@ -1,5 +1,5 @@
 # util
-Namespace of utility functions for MATLAB
+Namespace of utility functions and constants for MATLAB
 
 ```
 +util/@aux    Auxiliary functions
