@@ -173,14 +173,14 @@ classdef eval
                 func function_handle
             end
             arguments (Input, Repeating)
-                in (:,:) dd
+                in (:,:) double
             end
 
             feature('setround',inf);
-            C = func(in);
+            C = func(in{:});
 
             feature('setround',-inf);
-            D = func(in);
+            D = func(in{:});
 
             feature('setround',0.5);
             errflag = ~isequal(C,D);
