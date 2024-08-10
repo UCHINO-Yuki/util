@@ -2,7 +2,7 @@
 Namespace of utility functions and constants for MATLAB
 
 ```
-+util/@aux    Auxiliary functions
++util/@auxi   Auxiliary functions
 +util/@cpair  Fast pair arithmetic
 +util/@eft    Functions of error-free transformation
 +util/@eval   Functions for evaluating accuracy
@@ -18,7 +18,7 @@ For example, put the ``+util`` folder under ``C:\Users\user\Documents\MATLAB``.
 ## Usage
 Functions and constants always requires the full class name and the namespace as followings:
 ```
-s = util.aux.randsvd(n,cnd,mode)        % generating singular values with the same distribution of the singular values od gallery('randsvd',n,cnd,mode).
+s = util.auxi.randsvd(n,cnd,mode)       % generating singular values with the same distribution of the singular values od gallery('randsvd',n,cnd,mode).
 ur = util.fl.u(class)                   % unit roundoff
 [ch,cl] = util.cpair.times(ah,al,bh,bl) % cpair multiplication
 err = util.eval.evderr(a,x,exactx,d,exactd,type)  % error in EVD
