@@ -34,8 +34,6 @@ classdef auxi
                     s = sort(cnd.^(-rand(n,1)),'descend');
             end
             if sign(cnd)*sign(mode)>0
-                s = sort(s,'descend');
-            else
                 s = sort(s);
             end
         end
