@@ -174,13 +174,13 @@ classdef fl
         end
 
         function v = ulnp(v)
-            p = 63-floor(log2(abs(v)));
+            p = 54-nextpow2(v);
             v = pow2(v,p);
             v = pow2(bitand(v,-v,'int64'),-p);
         end
 
         function n = numbits(v)
-            p = 63-floor(log2(abs(v)));
+            p = 54-nextpow2(v);
             v = pow2(v,p);
             n = 53-log2(bitand(v,-v,'int64'));
             n(~isfinite(n)) = 0;
