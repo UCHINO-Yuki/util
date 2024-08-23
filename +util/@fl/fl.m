@@ -4,6 +4,7 @@ classdef fl
     %   Constants & Functions for floating-point operation
     %
     %   written ... 2024-08-03 ... UCHINO Yuki
+    %   written ... 2024-08-23 ... UCHINO Yuki
     %
 
     properties (Constant, Access=private)
@@ -174,13 +175,13 @@ classdef fl
         end
 
         function v = ulnp(v)
-            p = 54-nextpow2(v);
+            p = 52-nextpow2(util.fl.ufp(v));
             v = pow2(v,p);
             v = pow2(bitand(v,-v,'int64'),-p);
         end
 
         function n = numbits(v)
-            p = 54-nextpow2(v);
+            p = 52-nextpow2(util.fl.ufp(v));
             v = pow2(v,p);
             n = 53-log2(bitand(v,-v,'int64'));
             n(~isfinite(n)) = 0;
